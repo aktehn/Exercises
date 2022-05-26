@@ -1,0 +1,52 @@
+article {
+    --skin: #fdb;
+    position: relative;
+    width: 80vmin;
+    aspect-ratio: 1;
+    background: repeating-linear-gradient(#0002 0 0.125%, #0000 0 9.875%, #0002 0 10%),
+    repeating-linear-gradient(90deg, #0002 0 0.125%, #0000 0 9.875%, #0002 0 10%), #f002;
+}
+
+article *,
+article *::before,
+article *::after {
+    position: absolute;
+    box-sizing: border-box;
+}
+
+.face {
+    width: 70%;
+    height: 50%;
+    background: #00f4;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -0%);
+    border-radius: 10% 10% 20% 20% / 100%;
+    background: var(--skin);
+}
+.face::before {
+    content: "";
+    width: 50%;
+    height: 90%;
+    top: 60%;
+    left: 0;
+    background: #0f04;
+    border-radius: 0 0 0% 100%;
+    transform: skewY(10deg);
+    background: var(--skin);
+    border-left: 1vmin solid;
+    border-bottom: 0.5vmin solid;
+}
+.face::after {
+    content: "";
+    width: 50%;
+    height: 90%;
+    top: 60%;
+    right: 0.1%;
+    background: #0f04;
+    border-radius: 0 0% 100% 0%;
+    transform: skewY(-10deg);
+    background: var(--skin);
+    border-right: 0.75vmin solid;
+    border-bottom: 0.5vmin solid;
+}
