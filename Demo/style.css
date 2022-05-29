@@ -13,7 +13,6 @@ article {
     box-shadow: 0 0 0 1vmin var(--hair-dark);
     background: #ffd;
 }
-
 article *,
 article *::before,
 article *::after {
@@ -31,57 +30,56 @@ article *::after {
     border-radius: 10% 10% 20% 20% / 100%;
     background: radial-gradient(450% 80% at 50% -3%, var(--hair) 10.12%, #000 10.25% 11%, #0000 11.25%, #0000 11.25%), var(--skin);
     box-shadow: 
-        inset -0.75vmin 0, 
-        inset 0.75vmin 0,
-        inset 3vmin -1vmin 1vmin #0002,
-        inset 6vmin -2vmin 2vmin #c002,
-        inset -3vmin -1vmin 1vmin #fcc3,
-        inset -6vmin -2vmin 2vmin #c662;
+        inset -0.25vmin 0, 
+        inset 0.25vmin 0,
+        inset 3vmin -1vmin 1vmin rgba(194, 182, 182, 0.133),
+        inset 6vmin -2vmin 2vmin rgba(211, 205, 205, 0.133),
+        inset -3vmin -1vmin 1vmin rgba(201, 187, 187, 0.2),
+        inset -6vmin -2vmin 2vmin rgba(197, 183, 183, 0.133);
 }
 .face::before {
     content: "";
     width: 50%;
     height: 90%;
     top: 60%;
-    left: 0;
+    left: 0.1%;
     background: #0f04;
     border-radius: 0 0 0% 100%;
     transform: skewY(10deg);
     background: var(--skin);
     clip-path: polygon(0 20%, 100% 20%, 100% 100%, 0 100%);
     box-shadow: 
-        inset 0 -0.5vmin, 
-        inset 0.75vmin 0,
-        inset 3vmin 0 1vmin #0002,
-        inset 6vmin 0 2vmin #c002,
-        inset 0 -3vmin 1vmin -1vmin #c002
+        inset 0 -0.25vmin, 
+        inset 0.25vmin 0,
+        inset 3vmin 0 1vmin rgba(189, 175, 175, 0.133),
+        inset 6vmin 0 2vmin rgba(211, 201, 201, 0.133),
+        inset 0 -3vmin 1vmin -1vmin rgba(175, 153, 153, 0.133)
 }
 .face::after {
     content: "";
     width: 50%;
     height: 90%;
     top: 60%;
-    right: 0.1%;
+    right: 0.11%;
     background: #0f04;
     border-radius: 0 0% 100% 0%;
     transform: skewY(-10deg);
     background: var(--skin);
     clip-path: polygon(0 20%, 100% 20%, 100% 100%, 0 100%);
     box-shadow: 
-        inset 0 -0.5vmin, 
-        inset -0.75vmin 0,
-        inset -3vmin 0 1vmin #fcc3,
-        inset -6vmin 0 2vmin #c662,
-        inset 0 -3vmin 1vmin -1vmin #c002
+        inset 0 -0.25vmin, 
+        inset -0.25vmin 0,
+        inset -3vmin 0 1vmin rgba(199, 184, 184, 0.2),
+        inset -6vmin 0 2vmin rgba(201, 187, 187, 0.133),
+        inset 0 -3vmin 1vmin -1vmin rgba(194, 178, 178, 0.133)
 }
-
 .face * {
     z-index: 1;
 }
 
 .mouth {
-    width: 14%;
-    height: 3%;
+    width: 20%;
+    height: 1.5%;
     border-radius: 50%;
     border-left: 0.5vmin solid #0000;
     border-top: 0.5vmin solid;
@@ -89,8 +87,10 @@ article *::after {
     left: 50%;
     transform: rotate(3deg);
     box-shadow: 
-        -0.25vmin -0.45vmin 0.2vmin 0.25vmin var(--skin-dark)
-        -5.25vmin -0.45vmin 0.2vmin 0.125vmin var(--skin-dark)
+        -0.25vmin -1vmin 0.5vmin 1vmin var(--skin-dark),
+        0.25vmin 1vmin 0.5vmin 1vmin var(--skin-dark),
+        -9.5vmin -1vmin 0.5vmin 1vmin var(--skin-dark),
+        -9.5vmin 1vmin 0.5vmin 1vmin var(--skin-dark);
 }
 .mouth::before {
     content: "";
@@ -100,16 +100,16 @@ article *::after {
     border-left: 1vmin solid #0000;
     border-top: 0.5vmin solid;
     top: -0.4vmin;
-    transform: translate(-90%, 0);
+    transform: translate(-90%);
 }
 .mouth::after {
     content: "";
-    width: 50%;
+    width: 40%;
     height: 40%;
     background: #000;
     border-radius: 50% / 0 0 100% 100%;
     top: -0.125vmin;
-    transform: translate(-50%);
+    transform: translate(-45%);
 }
 
 .nose {
@@ -141,6 +141,7 @@ article *::after {
         -2.5vmin 1.5vmin 1.5vmin -0.75vmin var( --skin-dark),
         -3.5vmin 1.5vmin 2.5vmin -0.5vmin #fff3;
 }
+
 
 .lines {
     width: 100%;
