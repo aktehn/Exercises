@@ -117,5 +117,23 @@ function animate() {
     connect();
 }
 
+// Yeniden boyutlandırma
+window.addEventListener("resize",
+    function () {
+        canvas.width = innerWidth;
+        canvas.height = innerHeight;
+        mouse.radius = ((canvas.height / 80) * (canvas.height / 80));
+        init();
+    }
+);
+
+// mouseout event
+window.addEventListener("mouseout",
+    function () {
+        mouse.x = undefined;
+        mouse.y = undefined;
+    }
+);
+
 init();
 animate();
